@@ -13,10 +13,10 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'app/lib/jquery/jquery-1.11.0.min.js',
-            'app/lib/angular/angular.js',
-            'app/lib/angular-route/angular-route.js',
-            'app/lib/angular-mocks/angular-mocks.js',
+            'app/bower_components/jquery/dist/jquery.js',
+            'app/bower_components/angular/angular.js',
+            'app/bower_components/angular-route/angular-route.js',
+            'app/bower_components/angular-mocks/angular-mocks.js',
             'app/scripts/app.js',
             'app/scripts/**/*.js',
             'test/unit/**/*.js',
@@ -77,7 +77,7 @@ module.exports = function (config) {
 
         ngHtml2JsPreprocessor: {
             stripPrefix: 'app/',
-            moduleName: 'templates'
+            moduleName: 'ng'
         }
     });
 };

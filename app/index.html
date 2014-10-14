@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html ng-app>
 <head>
-    <meta charset="utf-8">
-    <title>myApp</title>
+  <meta charset="utf-8">
+  <title>myApp</title>
 
-    <!--
-    <link rel="stylesheet" href="styles/main.css">
-    -->
-
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+  <div class="container">
+
     <h1>Hello {{ name }}!</h1>
     <input type="text" ng-model="name" />
 
-
-    <!-- 3rd-Party Libs -->
-    <script src="lib/jquery/jquery-1.11.0.min.js"></script>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
-
-    <!-- Application Files -->
-
+  </div>
+  <!-- 3rd-Party Libs -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- Application Files -->
 </body>
 </html>

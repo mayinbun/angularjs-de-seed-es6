@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
-  <meta charset="utf-8">
-  <title>myApp</title>
+    <meta charset="utf-8">
+    <title>myApp</title>
 
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <div class="container">
+<div class="container">
 
     <h1>Hello {{ name }}!</h1>
-    <input type="text" ng-model="name" />
+    <input type="text" ng-model="name"/>
 
-  </div>
-  <!-- 3rd-Party Libs -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <!-- Application Files -->
+    <navigator-navbar></navigator-navbar>
+
+</div>
+<!-- 3rd-Party Libs -->
+<!-- Allow ES6 -->
+<script src="../node_modules/babel-core/browser.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<!-- Application Files -->
+<script src="../node_modules/systemjs/dist/system.js"></script>
+<script>
+    // set our baseURL reference path
+    System.config({
+        baseURL: '/app',
+        transpiler: 'babel'
+    });
+
+    // loads /app/main.js
+    System.import('app.js');
+</script>
 </body>
 </html>

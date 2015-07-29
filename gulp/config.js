@@ -22,7 +22,7 @@ module.exports = {
     dest: dest + "/images"
   },
   markup: {
-    src: src + "/htdocs/**",
+    src: [src + "/htdocs/**", src + "/components/**/*.html"],
     dest: dest
   },
   iconFonts: {

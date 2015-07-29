@@ -73,7 +73,8 @@ module.exports = function (config) {
 
         preprocessors: {
             'app/**/*.html': 'ng-html2js',
-            'app/**/*.js': 'browserify'
+            'app/**/*.js': 'browserify',
+            'test/**/*.js': 'browserify'
         },
 
         ngHtml2JsPreprocessor: {

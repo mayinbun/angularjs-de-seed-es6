@@ -8,7 +8,7 @@ module.exports = function (config) {
 
 
         // frameworks to use
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine','browserify'],
 
 
         // list of files / patterns to load in the browser
@@ -72,12 +72,21 @@ module.exports = function (config) {
         singleRun: true,
 
         preprocessors: {
-            'app/templates/**/*.html': 'ng-html2js'
+            'app/**/*.html': 'ng-html2js',
+            'app/**/*.js': 'browserify'
         },
 
         ngHtml2JsPreprocessor: {
             stripPrefix: 'app/',
             moduleName: 'ng'
+        },
+
+        browserify: {
+            debug: true,
+            extensions: ['.js'],
+            transform: [
+                ['babelify']
+            ]
         }
     });
 };

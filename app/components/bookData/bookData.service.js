@@ -5,6 +5,6 @@ angular.module('myApp')
 
     return {
       x: 'y',
-      y: 'y'
+      y: 'x'
     };
   });

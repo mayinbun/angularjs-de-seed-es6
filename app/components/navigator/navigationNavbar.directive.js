@@ -4,6 +4,7 @@ function NavigatorNavbar() {
    */
   class NavigatorNavbarVM {
     constructor($routeSegment, APP_CONFIG) {
+      'ngInject';
       this.$routeSegment = $routeSegment;
       this.apps = Object.keys(APP_CONFIG.apps).filter((key) => APP_CONFIG.apps[key]);
     }

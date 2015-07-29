@@ -1,8 +1,11 @@
+require('angular');
+require('angular-mocks');
+
 describe('A BookDataService', () => {
 
   var bookData;
 
-  beforeEach(module('myApp'));
+  beforeEach(angular.mock.module('myApp'));
 
 
   beforeEach(inject(_bookData_ => {
@@ -10,7 +13,15 @@ describe('A BookDataService', () => {
   }));
 
   it('should be defined', () => {
+    expect(bookData).toBeDefined();
+  });
 
-  })
+  it('should provide a x as "y"', () => {
+    expect(bookData.x).toEqual('y');
+  });
+
+  it('should provide a y as "x"', () => {
+    expect(bookData.y).toEqual('x');
+  });
 
 });

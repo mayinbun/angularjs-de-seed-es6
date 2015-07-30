@@ -1,6 +1,9 @@
 var angular = require('angular');
 
-angular.module('myApp', [require('../components/bookData')]);
+angular.module('myApp', [
+  require('../components/bookData'),
+  require('../components/navigator')
+]);
 
 
-require('../components/navigator');
+

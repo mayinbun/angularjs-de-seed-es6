@@ -14,7 +14,7 @@ export default function NavigatorNavbar() {
   return {
     restrict: 'E',
     scope: {},
-    templateUrl: 'navigator/templates/navigator-navbar.html',
+    templateUrl: 'navigator/navigator-navbar.html',
     controller: NavigatorNavbarVM,
     controllerAs: 'vm',
     bindToController: {

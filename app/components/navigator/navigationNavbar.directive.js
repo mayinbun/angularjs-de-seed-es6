@@ -1,4 +1,4 @@
-function NavigatorNavbar() {
+export default function NavigatorNavbar() {
   /**
    * The view model for the Navigator Navbar
    */
@@ -21,6 +21,4 @@ function NavigatorNavbar() {
       title: '='
     }
   };
-}
-
-export default NavigatorNavbar;
+};

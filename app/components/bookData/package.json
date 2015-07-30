@@ -1,0 +1,9 @@
+{
+  "name": "bookDataModule",
+  "version": "0.0.1",
+  "description": "A simple component",
+  "main": "book-data.js",
+  "dependencies": {
+    "angular": "^1.4.3"
+  }
+}

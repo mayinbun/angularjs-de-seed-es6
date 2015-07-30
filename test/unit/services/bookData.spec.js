@@ -5,7 +5,7 @@ describe('A BookDataService', () => {
 
   var bookData;
 
-  beforeEach(angular.mock.module('myApp'));
+  beforeEach(angular.mock.module('bookDataModule'));
 
 
   beforeEach(inject(_bookData_ => {

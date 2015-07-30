@@ -50,7 +50,6 @@
     "watchify": "^3.3.0"
   },
   "dependencies": {
-    "angular": "^1.4.3",
-    "gulp": "^3.9.0"
+    "angular": "^1.4.3"
   }
 }

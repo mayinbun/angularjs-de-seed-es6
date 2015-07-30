@@ -1,9 +1,9 @@
 import angular from 'angular';
 
-import navigationNavbar from './navigator-navbar.directive'
+import navigationNavbarDirective from './navigator-navbar.directive'
 import bookData from '../bookData'
 
 angular.module('navigator', [bookData])
-  .directive('navigatorNavbar', navigationNavbar);
+  .directive('navigatorNavbar', navigationNavbarDirective);
 
 export default 'navigator'

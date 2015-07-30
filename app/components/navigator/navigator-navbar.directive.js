@@ -1,12 +1,10 @@
-export default function NavigatorNavbar() {
+export default function NavigatorNavbar () {
   /**
    * The view model for the Navigator Navbar
    */
   class NavigatorNavbarVM {
-    constructor($routeSegment, APP_CONFIG) {
-      'ngInject';
-      this.$routeSegment = $routeSegment;
-      this.apps = Object.keys(APP_CONFIG.apps).filter((key) => APP_CONFIG.apps[key]);
+    constructor (bookData) {
+      this.x = bookData.x;
     }
   }
 

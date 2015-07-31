@@ -16,12 +16,12 @@ describe('A BookDataService', () => {
     expect(bookData).toBeDefined();
   });
 
-  it('should provide a x as "y"', () => {
-    expect(bookData.x).toEqual('y');
+  it('should provide a "getAll()" method', () => {
+    expect(bookData.getAll).toEqual(jasmine.any(Function));
   });
 
-  it('should provide a y as "x"', () => {
-    expect(bookData.y).toEqual('x');
+  it('should not provide a "$http()" method', () => {
+    expect(bookData.$http).not.toBeDefined();
   });
 
 });

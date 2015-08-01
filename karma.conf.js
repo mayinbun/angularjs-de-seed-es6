@@ -16,8 +16,7 @@ module.exports = function (config) {
             // 3rd-party resources
              // App
             'app/scripts/app.js',
-            'app/scripts/**/*.js',
-            'test/unit/**/*.js',
+            'app/**/*.js',
             'app/templates/**/*.html'
         ],
 

@@ -1,9 +1,0 @@
-{
-  "name": "navigator",
-  "version": "0.0.1",
-  "description": "A simple component",
-  "main": "navigator.js",
-  "dependencies": {
-    "angular": "^1.4.3"
-  }
-}

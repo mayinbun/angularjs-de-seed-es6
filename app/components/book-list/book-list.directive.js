@@ -4,7 +4,8 @@ export default function () {
   // controller
   class BookListDirectiveVM {
     constructor (BookData) {
-      this.books = BookData.getAll();
+      BookData.getAll()
+      .then(books => this.books = books);
     }
   }
 

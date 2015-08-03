@@ -1,23 +1,10 @@
-export default function(){
+export default function ($http) {
 
-  this.getAll = function(){
-    return [
-      {
-        title: 'A Sample Book 123',
-        author: 'Sample Max',
-        isbn: '123'
-      },
-      {
-        title: 'A another Book',
-        author: 'Robin',
-        isbn: '1234'
-      },
-      {
-        title: 'Ember.js',
-        author: 'Peter ABC',
-        isbn: '5555'
-      }
-    ];
+  const baseUrl = 'http://ajs-workshop.herokuapp.com/api/books/';
+
+  this.getAll = function () {
+    return $http.get(baseUrl)
+      .then(response => response.data);
   }
 
 }

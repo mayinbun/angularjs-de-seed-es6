@@ -1,0 +1,13 @@
+<input type="text" ng-model="vm.searchfield" placeholder="Title"/>
+<input type="text" ng-model="vm.searchfieldAuthor" placeholder="Author"/>
+<div class="row" ng-repeat="book in vm.books | filter:{title:vm.searchfield,author:vm.searchfieldAuthor} | orderBy:'title'">
+    <div class="col-xs-4">
+        {{ book.title}}
+    </div>
+    <div class="col-xs-4">
+        {{ book.author}}
+    </div>
+    <div class="col-xs-4">
+        {{ book.isbn}}
+    </div>
+</div>

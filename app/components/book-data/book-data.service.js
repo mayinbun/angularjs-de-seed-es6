@@ -3,9 +3,19 @@ export default function(){
   this.getAll = function(){
     return [
       {
-        name: 'A Sample Book',
+        title: 'A Sample Book 123',
         author: 'Sample Max',
-        isbn: '123456'
+        isbn: '123'
+      },
+      {
+        title: 'A another Book',
+        author: 'Robin',
+        isbn: '1234'
+      },
+      {
+        title: 'Ember.js',
+        author: 'Peter ABC',
+        isbn: '5555'
       }
     ];
   }

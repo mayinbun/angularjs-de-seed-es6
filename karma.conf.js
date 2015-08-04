@@ -75,7 +75,7 @@ module.exports = function (config) {
         },
 
         ngHtml2JsPreprocessor: {
-            stripPrefix: 'app/',
+            stripPrefix: 'app/components/',
             moduleName: 'ng'
         },
 

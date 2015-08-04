@@ -26,6 +26,13 @@ describe('A BookData Service', () => {
       expect(BookData.getAll).toEqual(jasmine.any(Function));
 
     });
+
+    it('should provide a createBook()-method', () => {
+
+      expect(BookData.createBook).toBeDefined();
+      expect(BookData.createBook).toEqual(jasmine.any(Function));
+
+    });
   });
 
 
@@ -63,6 +70,43 @@ describe('A BookData Service', () => {
 
       expect(result).toEqual(testData)
     })
+  })
+
+  describe('createBook()-method', function(){
+
+    let testBook = {isbn:123};
+
+    beforeEach(() => {
+      $httpBackend
+        .whenPOST('http://ajs-workshop.herokuapp.com/api/books/',testBook)
+        .respond(testBook);
+    });
+
+    it('should make a POST on http://ajs-workshop.herokuapp.com/api/books/ with correct payload', () => {
+      $httpBackend
+        .expectPOST('http://ajs-workshop.herokuapp.com/api/books/', testBook);
+
+      BookData.createBook(testBook);
+      $httpBackend.flush();
+    });
+
+    it('should return a promise', () => {
+      expect(BookData.createBook().then).toEqual(jasmine.any(Function));
+
+      $httpBackend.flush();
+
+    });
+
+    it('should resolve the promise with response.data', () => {
+      let result;
+
+      BookData.createBook()
+        .then((book) => result = book);
+      $httpBackend.flush();
+
+      expect(result).toEqual(testBook)
+    })
+
   })
 
 });

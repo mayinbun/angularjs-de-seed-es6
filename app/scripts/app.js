@@ -3,6 +3,7 @@ import angularRoute from 'angular-route'
 
 import BookDataModule from '../components/book-data'
 import BookListModule from '../components/book-list'
+import BookDetailModule from '../components/book-detail'
 import RouteConfig from './configs/route.config'
 
 angular.module('myApp', [
@@ -12,6 +13,7 @@ angular.module('myApp', [
 
   // my libs
   BookDataModule,
-  BookListModule
+  BookListModule,
+  BookDetailModule
 ])
 .config(RouteConfig);

@@ -2,7 +2,7 @@
 <input type="text" ng-model="vm.searchfieldAuthor" placeholder="Author"/>
 <div class="row" ng-repeat="book in vm.books | filter:{title:vm.searchfield,author:vm.searchfieldAuthor} | orderBy:'title'">
     <div class="col-xs-4">
-        {{ book.title }}
+        <a href="#/books/{{book.isbn}}">{{ book.title }}</a>
     </div>
     <div class="col-xs-4">
         {{ book.author}}

@@ -17,7 +17,7 @@ module.exports = function (config) {
              // App
             'app/scripts/app.js',
             'app/**/*.js',
-            'app/templates/**/*.html'
+            'app/**/*.html'
         ],
 
 

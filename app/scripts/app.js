@@ -6,7 +6,7 @@ import angularAria from 'angular-aria'
 import BookDataModule from '../components/book-data'
 import BookListModule from '../components/book-list'
 import BookDetailModule from '../components/book-detail'
-import BookFormModule from '../components/book-form'
+import BookCreateModule from '../components/book-create'
 
 // Configs
 import RouteConfig from './configs/route.config'
@@ -21,6 +21,6 @@ angular.module('myApp', [
   BookDataModule,
   BookListModule,
   BookDetailModule,
-  BookFormModule
+  BookCreateModule
 ])
 .config(RouteConfig);

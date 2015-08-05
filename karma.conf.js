@@ -14,7 +14,8 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             // 3rd-party resources
-             // App
+            'node_modules/jquery/dist/jquery.js',
+            // App
             'app/scripts/app.js',
             'app/**/*.js',
             'app/**/*.html'

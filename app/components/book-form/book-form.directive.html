@@ -1,0 +1,11 @@
+<form name="BookForm" novalidate>
+    <input placeholder="Book Title" class="form-control" type="text" ng-model="vm.book.title" name="bookTitle" required minlength="5" />
+    <span ng-show="BookForm.bookTitle.$error.required && BookForm.bookTitle.$dirty">This input in required!</span>
+    <span ng-show="BookForm.bookTitle.$error.minlength">Please write at least 5 characters!</span>
+
+    <input placeholder="Book Author" class="form-control" type="text" ng-model="vm.book.author" name="bookAuthor" required/>
+    <span ng-show="BookForm.bookAuthor.$error.required && BookForm.bookAuthor.$dirty">This input in required!</span>
+
+    <input placeholder="Book ISBN" class="form-control" type="number" ng-model="vm.book.isbn" name="bookIsbn" required/>
+    <span ng-show="BookForm.bookIsbn.$error.required && BookForm.bookIsbn.$dirty">This input in required!</span>
+</form>

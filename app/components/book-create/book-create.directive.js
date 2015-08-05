@@ -11,11 +11,8 @@ export default function(BookData, $location){
       BookData.createBook(book)
       .then(() => $location.path('#/books'));
     }
-    enableButton(){
-      this.isButtonDisabled = false;
-    }
-    disableButton(){
-      this.isButtonDisabled = true;
+    setButton(validState){
+      this.isButtonEnabled = validState;
     }
   }
 

@@ -2,5 +2,5 @@
 
 
 <h3>Create Book</h3>
-<book-form book-attr="vm.bookOnCreate" on-valid="vm.enableButton()" on-invalid="vm.disableButton()"></book-form>
-<button ng-disabled="vm.isButtonDisabled" ng-click="vm.createBook(vm.bookOnCreate)">Create now!</button>
+<book-form book-attr="vm.bookOnCreate" on-state-change="vm.setButton(validState)"></book-form>
+<button ng-disabled="!vm.isButtonEnabled" ng-click="vm.createBook(vm.bookOnCreate)">Create now!</button>

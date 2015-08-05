@@ -5,13 +5,10 @@ export default function(){
   class BookFormDirectiveVM{
     constructor($scope){
 
-      $scope.$watch('BookForm.$invalid', (newValue, oldValue) => {
-        if(newValue === true){
-          this.onInvalid(); // Call onInvalid
-        }
-        else if(newValue === false){
-          this.onValid(); // call onValid
-        }
+      $scope.$watch('BookForm.$valid', (newValue, oldValue) => {
+        this.onStateChange({
+          validState: newValue
+        })
       })
     }
   }
@@ -25,8 +22,7 @@ export default function(){
     controller: BookFormDirectiveVM,
     controllerAs: 'vm',
     bindToController: {
-      onValid: '&',
-      onInvalid: '&',
+      onStateChange: '&',
       book: '=bookAttr'
     }
   }

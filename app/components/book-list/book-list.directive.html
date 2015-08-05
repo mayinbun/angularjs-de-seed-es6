@@ -1,6 +1,6 @@
 <input type="text" ng-model="vm.searchfield" placeholder="Title"/>
 <input type="text" ng-model="vm.searchfieldAuthor" placeholder="Author"/>
-<div class="row" ng-repeat="book in vm.books | filter:{title:vm.searchfield,author:vm.searchfieldAuthor} | orderBy:'title'">
+<div data-test="booklist.row" class="row" ng-repeat="book in vm.books | filter:{title:vm.searchfield,author:vm.searchfieldAuthor} | orderBy:'title'">
     <div class="col-xs-4">
         <a href="#/books/{{book.isbn}}">{{ book.title }}</a>
     </div>

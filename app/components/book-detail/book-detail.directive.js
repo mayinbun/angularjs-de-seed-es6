@@ -13,6 +13,7 @@ export default function () {
     restrict     : 'E',
     templateUrl  : 'book-detail/book-detail.directive.html',
     controller   : BookDetailDirectiveVM,
-    controllerAs : 'vm'
+    controllerAs : 'vm',
+    scope: {}
   }
 }

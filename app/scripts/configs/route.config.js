@@ -5,7 +5,7 @@ export default function ($routeProvider) {
       template: '<book-list></book-list>'
     })
     .when('/books/create',{
-      template: '<book-form></book-form>'
+      template: '<book-create></book-create>'
     })
     .when('/books/:isbn',{
       template: '<book-detail></book-detail>'

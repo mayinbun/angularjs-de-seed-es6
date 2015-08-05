@@ -1,0 +1,9 @@
+{
+  "name": "book-create",
+  "version": "0.0.1",
+  "description": "A simple form for creating a book",
+  "main": "book-create.js",
+  "dependencies": {
+    "angular": "^1.4.3"
+  }
+}
